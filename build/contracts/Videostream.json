@@ -1,0 +1,1337 @@
+{
+  "contractName": "Videostream",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "videos",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "video_hash",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "title",
+          "type": "string"
+        }
+      ],
+      "name": "videouploading",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"videos\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"video_hash\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"title\",\"type\":\"string\"}],\"name\":\"videouploading\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Videostream.sol\":\"Videostream\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Videostream.sol\":{\"keccak256\":\"0xf719f6cfd3724600f881b0a515a86183b64164f9cb93f73d701395950fa96c9b\",\"urls\":[\"bzz-raw://1dfe8bb3a8ca724c41416b5dc447e4709d872bcc4db5f4663f6e941ae698600c\",\"dweb:/ipfs/QmPWYJf21gTzNFhdq6CdDQWd9Fvi5a3FEQTSWLTRNd18CV\"]}},\"version\":1}",
+  "bytecode": "0x60806040526000805534801561001457600080fd5b5061038a806100246000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638641c5c31461003b578063ae2246331461018d575b600080fd5b61018b6004803603604081101561005157600080fd5b810190808035906020019064010000000081111561006e57600080fd5b82018360208201111561008057600080fd5b803590602001918460018302840111640100000000831117156100a257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561010557600080fd5b82018360208201111561011757600080fd5b8035906020019184600183028401116401000000008311171561013957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101ab565b005b6101956102aa565b6040518082815260200191505060405180910390f35b6040518060a001604052808281526020013373ffffffffffffffffffffffffffffffffffffffff1681526020018381526020016000815260200160008152506001600080548152602001908152602001600020600082015181600001908051906020019061021a9291906102b0565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604082015181600201908051906020019061027e9291906102b0565b506060820151816003015560808201518160040155905050600160008082825401925050819055505050565b60005481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102f157805160ff191683800117855561031f565b8280016001018555821561031f579182015b8281111561031e578251825591602001919060010190610303565b5b50905061032c9190610330565b5090565b61035291905b8082111561034e576000816000905550600101610336565b5090565b9056fea265627a7a72315820fc48145d2a4f76facfa72f700958d99a9211441bd80a671c87ec6f8fd096b2f164736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80638641c5c31461003b578063ae2246331461018d575b600080fd5b61018b6004803603604081101561005157600080fd5b810190808035906020019064010000000081111561006e57600080fd5b82018360208201111561008057600080fd5b803590602001918460018302840111640100000000831117156100a257600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561010557600080fd5b82018360208201111561011757600080fd5b8035906020019184600183028401116401000000008311171561013957600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101ab565b005b6101956102aa565b6040518082815260200191505060405180910390f35b6040518060a001604052808281526020013373ffffffffffffffffffffffffffffffffffffffff1681526020018381526020016000815260200160008152506001600080548152602001908152602001600020600082015181600001908051906020019061021a9291906102b0565b5060208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550604082015181600201908051906020019061027e9291906102b0565b506060820151816003015560808201518160040155905050600160008082825401925050819055505050565b60005481565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102f157805160ff191683800117855561031f565b8280016001018555821561031f579182015b8281111561031e578251825591602001919060010190610303565b5b50905061032c9190610330565b5090565b61035291905b8082111561034e576000816000905550600101610336565b5090565b9056fea265627a7a72315820fc48145d2a4f76facfa72f700958d99a9211441bd80a671c87ec6f8fd096b2f164736f6c63430005100032",
+  "sourceMap": "36:419:1:-;;;83:1;64:20;;36:419;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:419:1;;;;;;;",
+  "deployedSourceMap": "36:419:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;36:419:1;;;;;;;;;;;;;;;;;;;;;;;;275:177;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;275:177:1;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;275:177:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;275:177:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;275:177:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;275:177:1;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;275:177:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;275:177:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;275:177:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;275:177:1;;;;;;;;;;;;;;;:::i;:::-;;64:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;275:177;384:38;;;;;;;;390:5;384:38;;;;396:10;384:38;;;;;;407:10;384:38;;;;418:1;384:38;;;;420:1;384:38;;;363:11;:19;375:6;;363:19;;;;;;;;;;;:59;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;441:1;433:6;;:9;;;;;;;;;;;275:177;;:::o;64:20::-;;;;:::o;36:419::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract Videostream {\r\n    uint public videos=0;\r\n    struct Video{\r\n        string title;\r\n        address author_add;\r\n        string hash;\r\n        uint likes;\r\n        uint dislikes;\r\n    }\r\n    mapping(uint=>Video) video_lists;\r\n    function videouploading(string memory video_hash,string memory title) public {\r\n        video_lists[videos]= Video(title,msg.sender,video_hash,0,0);\r\n        videos+=1;\r\n\r\n    }\r\n}",
+  "sourcePath": "C:\\Users\\HP\\Desktop\\VideoPrism\\contracts\\Videostream.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Videostream.sol",
+    "exportedSymbols": {
+      "Videostream": [
+        82
+      ]
+    },
+    "id": 83,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 82,
+        "linearizedBaseContracts": [
+          82
+        ],
+        "name": "Videostream",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 41,
+            "name": "videos",
+            "nodeType": "VariableDeclaration",
+            "scope": 82,
+            "src": "64:20:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 39,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "64:4:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 40,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "83:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Videostream.Video",
+            "id": 52,
+            "members": [
+              {
+                "constant": false,
+                "id": 43,
+                "name": "title",
+                "nodeType": "VariableDeclaration",
+                "scope": 52,
+                "src": "114:12:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 42,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "114:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 45,
+                "name": "author_add",
+                "nodeType": "VariableDeclaration",
+                "scope": 52,
+                "src": "137:18:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 44,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "137:7:1",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 47,
+                "name": "hash",
+                "nodeType": "VariableDeclaration",
+                "scope": 52,
+                "src": "166:11:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 46,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "166:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 49,
+                "name": "likes",
+                "nodeType": "VariableDeclaration",
+                "scope": 52,
+                "src": "188:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 48,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "188:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 51,
+                "name": "dislikes",
+                "nodeType": "VariableDeclaration",
+                "scope": 52,
+                "src": "209:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 50,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "209:4:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Video",
+            "nodeType": "StructDefinition",
+            "scope": 82,
+            "src": "91:139:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 56,
+            "name": "video_lists",
+            "nodeType": "VariableDeclaration",
+            "scope": 82,
+            "src": "236:32:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Video_$52_storage_$",
+              "typeString": "mapping(uint256 => struct Videostream.Video)"
+            },
+            "typeName": {
+              "id": 55,
+              "keyType": {
+                "id": 53,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "244:4:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "236:20:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Video_$52_storage_$",
+                "typeString": "mapping(uint256 => struct Videostream.Video)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 54,
+                "name": "Video",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 52,
+                "src": "250:5:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Video_$52_storage_ptr",
+                  "typeString": "struct Videostream.Video"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 80,
+              "nodeType": "Block",
+              "src": "352:100:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 63,
+                        "name": "video_lists",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 56,
+                        "src": "363:11:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_uint256_$_t_struct$_Video_$52_storage_$",
+                          "typeString": "mapping(uint256 => struct Videostream.Video storage ref)"
+                        }
+                      },
+                      "id": 65,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 64,
+                        "name": "videos",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 41,
+                        "src": "375:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "363:19:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Video_$52_storage",
+                        "typeString": "struct Videostream.Video storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 67,
+                          "name": "title",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 60,
+                          "src": "390:5:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "expression": {
+                            "argumentTypes": null,
+                            "id": 68,
+                            "name": "msg",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 97,
+                            "src": "396:3:1",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_magic_message",
+                              "typeString": "msg"
+                            }
+                          },
+                          "id": 69,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "memberName": "sender",
+                          "nodeType": "MemberAccess",
+                          "referencedDeclaration": null,
+                          "src": "396:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 70,
+                          "name": "video_hash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 58,
+                          "src": "407:10:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 71,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "418:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        },
+                        {
+                          "argumentTypes": null,
+                          "hexValue": "30",
+                          "id": 72,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "number",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "420:1:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          "value": "0"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          },
+                          {
+                            "typeIdentifier": "t_rational_0_by_1",
+                            "typeString": "int_const 0"
+                          }
+                        ],
+                        "id": 66,
+                        "name": "Video",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 52,
+                        "src": "384:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Video_$52_storage_ptr_$",
+                          "typeString": "type(struct Videostream.Video storage pointer)"
+                        }
+                      },
+                      "id": 73,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "384:38:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Video_$52_memory",
+                        "typeString": "struct Videostream.Video memory"
+                      }
+                    },
+                    "src": "363:59:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Video_$52_storage",
+                      "typeString": "struct Videostream.Video storage ref"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "363:59:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 78,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 76,
+                      "name": "videos",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "433:6:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "+=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "31",
+                      "id": 77,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "441:1:1",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_1_by_1",
+                        "typeString": "int_const 1"
+                      },
+                      "value": "1"
+                    },
+                    "src": "433:9:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 79,
+                  "nodeType": "ExpressionStatement",
+                  "src": "433:9:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 81,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "videouploading",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 61,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 58,
+                  "name": "video_hash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "299:24:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 57,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "299:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 60,
+                  "name": "title",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "324:19:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "324:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "298:46:1"
+            },
+            "returnParameters": {
+              "id": 62,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "352:0:1"
+            },
+            "scope": 82,
+            "src": "275:177:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 83,
+        "src": "36:419:1"
+      }
+    ],
+    "src": "0:455:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Videostream.sol",
+      "exportedSymbols": {
+        "Videostream": [
+          82
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 38,
+        "name": "PragmaDirective",
+        "src": "0:32:1"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            82
+          ],
+          "name": "Videostream",
+          "scope": 83
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "videos",
+              "scope": 82,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 39,
+                "name": "ElementaryTypeName",
+                "src": "64:4:1"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 40,
+                "name": "Literal",
+                "src": "83:1:1"
+              }
+            ],
+            "id": 41,
+            "name": "VariableDeclaration",
+            "src": "64:20:1"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Videostream.Video",
+              "name": "Video",
+              "scope": 82,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "title",
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 42,
+                    "name": "ElementaryTypeName",
+                    "src": "114:6:1"
+                  }
+                ],
+                "id": 43,
+                "name": "VariableDeclaration",
+                "src": "114:12:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "author_add",
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "stateMutability": "nonpayable",
+                      "type": "address"
+                    },
+                    "id": 44,
+                    "name": "ElementaryTypeName",
+                    "src": "137:7:1"
+                  }
+                ],
+                "id": 45,
+                "name": "VariableDeclaration",
+                "src": "137:18:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "hash",
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string"
+                    },
+                    "id": 46,
+                    "name": "ElementaryTypeName",
+                    "src": "166:6:1"
+                  }
+                ],
+                "id": 47,
+                "name": "VariableDeclaration",
+                "src": "166:11:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "likes",
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 48,
+                    "name": "ElementaryTypeName",
+                    "src": "188:4:1"
+                  }
+                ],
+                "id": 49,
+                "name": "VariableDeclaration",
+                "src": "188:10:1"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "dislikes",
+                  "scope": 52,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 50,
+                    "name": "ElementaryTypeName",
+                    "src": "209:4:1"
+                  }
+                ],
+                "id": 51,
+                "name": "VariableDeclaration",
+                "src": "209:13:1"
+              }
+            ],
+            "id": 52,
+            "name": "StructDefinition",
+            "src": "91:139:1"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "video_lists",
+              "scope": 82,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(uint256 => struct Videostream.Video)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(uint256 => struct Videostream.Video)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 53,
+                    "name": "ElementaryTypeName",
+                    "src": "244:4:1"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Video",
+                      "referencedDeclaration": 52,
+                      "type": "struct Videostream.Video"
+                    },
+                    "id": 54,
+                    "name": "UserDefinedTypeName",
+                    "src": "250:5:1"
+                  }
+                ],
+                "id": 55,
+                "name": "Mapping",
+                "src": "236:20:1"
+              }
+            ],
+            "id": 56,
+            "name": "VariableDeclaration",
+            "src": "236:32:1"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "videouploading",
+              "scope": 82,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "video_hash",
+                      "scope": 81,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 57,
+                        "name": "ElementaryTypeName",
+                        "src": "299:6:1"
+                      }
+                    ],
+                    "id": 58,
+                    "name": "VariableDeclaration",
+                    "src": "299:24:1"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "title",
+                      "scope": 81,
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "type": "string",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string"
+                        },
+                        "id": 59,
+                        "name": "ElementaryTypeName",
+                        "src": "324:6:1"
+                      }
+                    ],
+                    "id": 60,
+                    "name": "VariableDeclaration",
+                    "src": "324:19:1"
+                  }
+                ],
+                "id": 61,
+                "name": "ParameterList",
+                "src": "298:46:1"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 62,
+                "name": "ParameterList",
+                "src": "352:0:1"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "struct Videostream.Video storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "struct Videostream.Video storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 56,
+                                  "type": "mapping(uint256 => struct Videostream.Video storage ref)",
+                                  "value": "video_lists"
+                                },
+                                "id": 63,
+                                "name": "Identifier",
+                                "src": "363:11:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 41,
+                                  "type": "uint256",
+                                  "value": "videos"
+                                },
+                                "id": 64,
+                                "name": "Identifier",
+                                "src": "375:6:1"
+                              }
+                            ],
+                            "id": 65,
+                            "name": "IndexAccess",
+                            "src": "363:19:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": true,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "struct Videostream.Video memory",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_address_payable",
+                                      "typeString": "address payable"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_string_memory_ptr",
+                                      "typeString": "string memory"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_rational_0_by_1",
+                                      "typeString": "int_const 0"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 52,
+                                  "type": "type(struct Videostream.Video storage pointer)",
+                                  "value": "Video"
+                                },
+                                "id": 66,
+                                "name": "Identifier",
+                                "src": "384:5:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 60,
+                                  "type": "string memory",
+                                  "value": "title"
+                                },
+                                "id": 67,
+                                "name": "Identifier",
+                                "src": "390:5:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address payable"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 97,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 68,
+                                    "name": "Identifier",
+                                    "src": "396:3:1"
+                                  }
+                                ],
+                                "id": 69,
+                                "name": "MemberAccess",
+                                "src": "396:10:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 58,
+                                  "type": "string memory",
+                                  "value": "video_hash"
+                                },
+                                "id": 70,
+                                "name": "Identifier",
+                                "src": "407:10:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 71,
+                                "name": "Literal",
+                                "src": "418:1:1"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "30",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "number",
+                                  "type": "int_const 0",
+                                  "value": "0"
+                                },
+                                "id": 72,
+                                "name": "Literal",
+                                "src": "420:1:1"
+                              }
+                            ],
+                            "id": 73,
+                            "name": "FunctionCall",
+                            "src": "384:38:1"
+                          }
+                        ],
+                        "id": 74,
+                        "name": "Assignment",
+                        "src": "363:59:1"
+                      }
+                    ],
+                    "id": 75,
+                    "name": "ExpressionStatement",
+                    "src": "363:59:1"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "+=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 41,
+                              "type": "uint256",
+                              "value": "videos"
+                            },
+                            "id": 76,
+                            "name": "Identifier",
+                            "src": "433:6:1"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "31",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 1",
+                              "value": "1"
+                            },
+                            "id": 77,
+                            "name": "Literal",
+                            "src": "441:1:1"
+                          }
+                        ],
+                        "id": 78,
+                        "name": "Assignment",
+                        "src": "433:9:1"
+                      }
+                    ],
+                    "id": 79,
+                    "name": "ExpressionStatement",
+                    "src": "433:9:1"
+                  }
+                ],
+                "id": 80,
+                "name": "Block",
+                "src": "352:100:1"
+              }
+            ],
+            "id": 81,
+            "name": "FunctionDefinition",
+            "src": "275:177:1"
+          }
+        ],
+        "id": 82,
+        "name": "ContractDefinition",
+        "src": "36:419:1"
+      }
+    ],
+    "id": 83,
+    "name": "SourceUnit",
+    "src": "0:455:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x2F95071E567845fde5BD971b6E84dE2d0ae49175",
+      "transactionHash": "0x7cf1b79a6050dc63472ce65aea2920c864da2886088e668ab43771c6dac037e9"
+    }
+  },
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-20T19:17:33.409Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
